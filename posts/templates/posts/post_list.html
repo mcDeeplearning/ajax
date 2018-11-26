@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
 {% block body %}
+    <div class="row">
     {% for post in post_list %}
-        {{post.title}}
+        {% include 'posts/_post.html'%}
     {% endfor %}
+    </div>
 {% endblock %}

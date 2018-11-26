@@ -1,10 +1,9 @@
 {%extends 'base.html'%}
-{% load bootstrap4 %}
 
 {%block body%}
     <form method='post'>
         {%csrf_token%}
-        {% bootstrap_form form %}
+        {{form.as_p}}
         <input type="submit" value="Submit"/>
     </form>
 {%endblock%}
